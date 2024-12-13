@@ -1,0 +1,140 @@
+#endpoint-list-container {
+    max-height: 540px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Basic styles for the namespace container */
+.namespace-container {
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.namespace-header {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    vertical-align: middle;
+}
+
+.namespace-checkbox {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.namespace-container > div:first-child {
+    display: inline-block;
+}
+
+.search-container {
+	/* This bit sets up the horizontal layout */
+	display:flex;
+	flex-direction:row;
+	margin-bottom: 10px;
+	 
+	/* This bit draws the box around it */
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	transition: border-color 0.3s ease;
+	align-items: center;
+	background: #f9f9f9;
+
+	/* I've used padding so you can see the edges of the elements. */
+	padding:1px;
+}
+
+.search-container input {
+	/* Tell the input to use all the available space */
+	flex-grow:2;
+	
+	/* And hide the input's outline, so the form looks like the outline */
+	border:none;
+	border-radius: 20px;
+	  
+	width: 100%;
+	padding: 10px 20px;
+	padding-right: 30px; /* Add space for the button inside the input */
+	font-size: 14px;
+	outline: none;
+	background: #f9f9f9;
+}
+
+.search-container input:focus {
+    border-color: transparent;
+	box-shadow: none;
+	outline: none
+}
+
+.search-container a {
+    color: #ccc;
+	padding-right: 10px;
+	font-size: 28px;
+    cursor: pointer;
+    display: none;  /* Hidden by default */
+}
+
+.search-container a:hover {
+    color: #888;
+}
+
+/* Style for the list of groups */
+.endpoints-list {
+    padding-left: 20px;
+}
+
+/* Group container */
+.group-container {
+    margin: 5px 0;
+}
+
+/* Group header */
+.group-header {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Endpoint item styles */
+.endpoint-item {
+    margin: 5px 0;
+}
+
+.group-item {
+	margin: 5px 0;	
+}
+
+.group-endpoints-list {
+	padding-left: 20px;
+}
+
+/* Endpoint item label styles */
+.endpoint-item label {
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+/* Make checkboxes look nicer */
+.endpoint-checkbox {
+    margin-right: 10px;
+}
+
+/* Change the color of checked/unchecked checkboxes */
+.endpoint-checkbox:checked + label {
+    color: green;
+}
+
+.endpoint-checkbox:not(:checked) + label {
+    color: red;
+}
+
+/* Add hover effect for the endpoint items */
+.endpoint-item:hover {
+    background-color: #f0f0f0;
+}
